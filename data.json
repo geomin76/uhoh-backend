@@ -1,0 +1,164 @@
+{
+    "Bacterial Vaginosis": [
+        "Abnormal vaginal discharge",
+        "Pain, itching, or burning in the vagina",
+        "A strong fish-like odor, especially after sex",
+        "Burning when peeing",
+        "Itching around the outside of the vagina"
+    ],
+    "Chlamydia": [
+        "Abnormal vaginal discharge",
+        "Burning when peeing",
+        "Abnormal penis discharge",
+        "Pain and swelling in testicles",
+        "Rectal pain",
+        "Rectal discharge",
+        "Rectal bleeding",
+        "Unusual sore",
+        "Smelly discharge",
+        "Bleeding between periods"
+    ],
+    "Gonorrhea": [
+        "Burning when peeing",
+        "Increased vaginal discharge",
+        "Bleeding between periods",
+        "Pain and swelling in testicles",
+        "Abnormal penis discharge",
+        "Rectal discharge",
+        "Anal itching",
+        "Rectal soreness",
+        "Rectal bleeding",
+        "Painful bowel movements"
+    ],
+    "Hepatitis A": [
+        "Upset stomach",
+        "Yellow skin or eyes",
+        "Not wanting to eat",
+        "Throwing up",
+        "Stomach pain",
+        "Fever",
+        "Dark urine",
+        "Light-colored stools",
+        "Diarrhea",
+        "Joint pain",
+        "Feeling tired"
+    ],
+    "Hepatitis B": [
+        "Fever",
+        "Fatigue",
+        "Loss of appetite",
+        "Nausea",
+        "Vomiting",
+        "Abdominal pain",
+        "Dark urine",
+        "Clay-colored stool",
+        "Joint pain",
+        "Jaundice"
+    ],
+    "Hepatitis C": [
+        "Fever",
+        "Fatigue",
+        "Loss of appetite",
+        "Nausea",
+        "Vomiting",
+        "Abdominal pain",
+        "Dark urine",
+        "Clay-colored stool",
+        "Joint pain",
+        "Jaundice"
+    ],
+    "Herpes": [
+        "Fever",
+        "Body aches",
+        "Swollen glands",
+        "Blisters around genitals",
+        "Blisters around rectum",
+        "Blisters around mouth"
+    ],
+    "HIV/AIDS": [
+        "Weight loss",
+        "Fever",
+        "Fatigue",
+        "Swollen lymph nodes",
+        "Diarrhea",
+        "Mouth sores",
+        "Anus sores",
+        "Genital sores",
+        "Pneumonia",
+        "Red, brown, pink or purplish blotches on/under/in mouth, nose, or eyelids",
+        "Memory loss",
+        "Depression",
+        "Chills",
+        "Rash",
+        "Night sweats",
+        "Muscle aches",
+        "Sore throat",
+        "Mouth ulcers"
+    ],
+    "Human Papillomavirus (HPV)": [
+        "Painless lumps around vagina",
+        "Painless lumps around penis",
+        "Painless lumps around anus"
+    ],
+    "Mycoplasma genitalium (Mgen)": [
+        "Vaginal discharge",
+        "Burning when peeing",
+        "Discharge from penis"
+    ],
+    "Pelvic Inflammatory Disease (PID)": [
+        "Abdominal pain",
+        "Fever",
+        "Abnormal vaginal discharge",
+        "Smelly discharge",
+        "Pain and/or bleeding when having sex",
+        "Burning when peeing",
+        "Bleeding between periods"
+    ],
+    "Syphilis": [
+        "Mouth sores",
+        "Genital sores",
+        "Anus sores",
+        "Rashes",
+        "Fever",
+        "Swollen lymph nodes",
+        "Sore throat",
+        "Patchy hair loss",
+        "Headaches",
+        "Weight loss",
+        "Muscle aches",
+        "Fatigue"   
+    ],
+    "Neurosyphilis": [
+        "Severe headache",
+        "Troubled muscle movements",
+        "Muscle weakness",
+        "Muscle paralysis",
+        "Numbness",
+        "Changes in mental status",
+        "Dementia"
+    ],
+    "Ocular Syphilis": [
+        "Eye pain",
+        "Eye redness",
+        "Floating spots in field of vision",
+        "Sensitivity to light",
+        "Changes in vision"
+    ],
+    "Otosyphilis": [
+        "Hearing loss",
+        "Ringing, buzzing, roaring or hissing in the ears",
+        "Tinnitus",
+        "Balance difficulties",
+        "Dizziness",
+        "Vertigo"
+    ],
+    "Trichomoniasis": [
+        "Itching or irritation inside the penis",
+        "Burning after peeing",
+        "Burning after ejaculating",
+        "Abnormal penis discharge",
+        "Pain, itching, or burning in the vagina",
+        "Discomfort when peeing",
+        "Abnormal vaginal discharge"
+    ]
+}
