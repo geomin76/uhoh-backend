@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request, json
 from service.neo4j_functions import Neo4JFunctions
 
 app = Flask(__name__)
@@ -7,9 +7,11 @@ app = Flask(__name__)
 def main():
     return "Hello, World!"
 
-@app.route("/stds", methods=['GET'])
+@app.route("/stds", methods=['POST'])
 def stds():
-    records = Neo4JFunctions.get_stds(['Burning when peeing', 'Rectal Discharge', 'Smelly discharge', 'Fatigue'])
+    # requires a list of symptoms [""]
+    data = json.loads(request.data)
+    records = Neo4JFunctions.get_stds(data)
     for std in records:
         print(std.data())
     return "Data is back!"
