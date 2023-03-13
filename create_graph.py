@@ -35,7 +35,7 @@ def symptom_std_relationship(tx, std_name, symptom_name):
     MATCH
         (s1:Symptom { name: $symptom_name }),
         (d1:STD { name: $std_name })
-    CREATE (s1)-[:`SYMPTOM OF`]->(d1)
+    CREATE (s1)-[:`SYMPTOM`]->(d1)
     """
   )
   result = tx.run(query, std_name=std_name, symptom_name=symptom_name)
