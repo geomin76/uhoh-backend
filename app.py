@@ -11,12 +11,19 @@ def main():
 def stds():
     # requires a list of symptoms [""]
     data = json.loads(request.data)
+    # get unique stds from graphDB
     records = set(Neo4JFunctions.get_stds(data))
     res = []
     for std in records:
         symptoms, symptoms_length = Neo4JFunctions.symptom_intersection(data, std.data()['s.name'])
+
+        # appending length of symptoms, the name and list of symptoms
         res.append(
-            (symptoms_length, std.data()['s.name'], list(symptoms))
+            {
+                "symptom_length": symptoms_length, 
+                "symptom_name": std.data()['s.name'], 
+                "symptom_list": list(symptoms)
+            }
         )
     return jsonify(res)
 
