@@ -1,4 +1,4 @@
-from flask import Flask, request, json
+from flask import Flask, request, json, jsonify
 from service.neo4j_functions import Neo4JFunctions
 
 app = Flask(__name__)
@@ -11,10 +11,21 @@ def main():
 def stds():
     # requires a list of symptoms [""]
     data = json.loads(request.data)
-    records = Neo4JFunctions.get_stds(data)
+    # get unique stds from graphDB
+    records = set(Neo4JFunctions.get_stds(data))
+    res = []
     for std in records:
-        print(std.data())
-    return "Data is back!"
+        symptoms, symptoms_length = Neo4JFunctions.symptom_intersection(data, std.data()['s.name'])
+
+        # appending length of symptoms, the name and list of symptoms
+        res.append(
+            {
+                "symptom_length": symptoms_length, 
+                "symptom_name": std.data()['s.name'], 
+                "symptom_list": list(symptoms)
+            }
+        )
+    return jsonify(res)
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=5000, debug=True)
