@@ -27,5 +27,11 @@ def stds():
         )
     return jsonify(res)
 
+@app.route("/all", methods=['GET'])
+def all_stds():
+    records = set(Neo4JFunctions.all_stds())
+    res = [std.data()['s']['name'] for std in records]
+    return jsonify(res)
+
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=5000, debug=True)

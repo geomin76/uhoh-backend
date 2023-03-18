@@ -11,6 +11,11 @@ class Neo4JFunctions:
         with neo4j.db().session(database="neo4j") as session:
             records = session.execute_read(Neo4JFunctions.query, std_list)
             return records
+        
+    def all_stds():
+        with neo4j.db().session(database="neo4j") as session:
+            records = session.execute_read(Neo4JFunctions.all_query)
+            return records
 
     def query(tx, std_list):
         query = (
@@ -22,6 +27,17 @@ class Neo4JFunctions:
             """
         )
         result = tx.run(query, std_list=std_list)
+        records = list(result)
+        return records
+    
+    def all_query(tx):
+        query = (
+            """
+            MATCH (s:Symptom)
+            RETURN s
+            """
+        )
+        result = tx.run(query)
         records = list(result)
         return records
     
