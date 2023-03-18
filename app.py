@@ -1,7 +1,9 @@
 from flask import Flask, request, json, jsonify
 from service.neo4j_functions import Neo4JFunctions
+from flask_cors import CORS
 
 app = Flask(__name__)
+cors = CORS(app)
 
 @app.route("/")
 def main():
