@@ -1,7 +1,9 @@
 from flask import Flask, request, json, jsonify
 from service.neo4j_functions import Neo4JFunctions
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 @app.route("/")
 def main():
@@ -25,6 +27,12 @@ def stds():
                 "symptom_list": list(symptoms)
             }
         )
+    return jsonify(res)
+
+@app.route("/all", methods=['GET'])
+def all_stds():
+    records = set(Neo4JFunctions.all_stds())
+    res = [std.data()['s']['name'] for std in records]
     return jsonify(res)
 
 if __name__ == '__main__':
