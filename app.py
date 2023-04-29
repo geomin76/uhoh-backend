@@ -23,7 +23,7 @@ def stds():
         res.append(
             {
                 "symptom_length": symptoms_length, 
-                "symptom_name": std.data()['s.name'], 
+                "std_name": std.data()['s.name'], 
                 "symptom_list": list(symptoms)
             }
         )
