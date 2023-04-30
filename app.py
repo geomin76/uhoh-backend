@@ -1,6 +1,7 @@
 from flask import Flask, request, json, jsonify
 from service.neo4j_functions import Neo4JFunctions
 from flask_cors import CORS
+from service.data_service import DataService
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
@@ -24,7 +25,8 @@ def stds():
             {
                 "symptom_length": symptoms_length, 
                 "std_name": std.data()['s.name'], 
-                "symptom_list": list(symptoms)
+                "symptom_list": list(symptoms),
+                "std_url": DataService.get_url(std.data()['s.name'])
             }
         )
     return jsonify(res)
